@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Brady Koenig</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script>
+    window.addEventListener("load", () => {
+      AOS.init();
+    });
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="logo">Brady Koenig</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="section" data-aos="fade-up">
+      <h1 class="section-title">Featured Projects</h1>
+      <div class="card-grid">
+
+        <div class="card" data-aos="fade-up">
+          <h3>Clink App</h3>
+          <p>A React Native marketplace connecting content creators with businesses. Features include Firebase Auth, Cloudinary media, and Stripe payments.</p>
+          <a href="https://clinkapp.org" target="_blank">Visit Site</a>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Portfolio Website</h3>
+          <p>Dockerized full-stack portfolio hosted on Azure. Integrates a chatbot, stock data tracker, and CI/CD using Bitbucket Pipelines.</p>
+          <a href="http://cps449-koenigb2.eastus.cloudapp.azure.com/project1/form.html" target="_blank">Visit Site</a>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Capstone CMS</h3>
+          <p>Custom Django CMS built for the Society of Women Journalists. Includes dynamic admin dashboards and deployed via Render.</p>
+          <a href="https://www.swj1894.org/" target="_blank">Visit Site</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section center-text" data-aos="fade-up" style="margin-top: 50px;">
+      <a href="resume.html" class="hero-btn">View My Resume</a>
+    </section>
+  </main>
+
+  <footer>© 2025 Brady Koenig • All Rights Reserved</footer>
+</body>
+</html>
