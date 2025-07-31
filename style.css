@@ -101,6 +101,7 @@ main {
   object-fit: cover;
   border: 4px solid var(--accent);
   box-shadow: 0 0 30px rgba(255, 204, 0, 0.2);
+  transform: translateZ(0);
 }
 
 .hero h1 {
@@ -124,6 +125,8 @@ main {
   font-weight: 700;
   transition: transform 0.3s;
   display: inline-block;
+  margin-bottom: 1rem;
+  transform: translateZ(0);
 }
 
 .hero-btn:hover {
@@ -261,6 +264,7 @@ footer {
   color: #777;
 }
 
+/* Gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -275,6 +279,7 @@ footer {
   border-radius: 12px;
 }
 
+/* About Section */
 .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -309,4 +314,69 @@ footer {
   font-size: 1.05rem;
 }
 
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem;
+    text-align: center;
+  }
 
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero img.profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-btn,
+  button {
+    font-size: 1rem;
+    padding: 0.8rem 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  main {
+    padding: 40px 16px;
+  }
+
+  .section {
+    margin-top: 60px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img {
+    margin-bottom: 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
