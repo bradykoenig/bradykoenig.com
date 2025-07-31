@@ -165,7 +165,7 @@ main {
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 30px rgba(255, 204, 0, 0.2);
+  box-shadow: 0 20px 30px rgba(255, 0, 0, 0.199);
 }
 
 .card h3 {
@@ -198,7 +198,7 @@ main {
   padding: 60px;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 0 40px rgba(255, 204, 0, 0.08), 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.199), 0 20px 60px rgba(0, 0, 0, 0.3);
   max-width: 600px;
   width: 100%;
 }
@@ -237,7 +237,7 @@ main {
 .contact-box:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.199);
 }
 
 .contact-box a {
