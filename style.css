@@ -39,7 +39,7 @@ body::before {
   100% { transform: translate(100px, 60px); }
 }
 
-/* Navbar – same look for all screen sizes */
+/* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
@@ -51,7 +51,6 @@ nav {
   top: 0;
   z-index: 100;
   flex-wrap: nowrap;
-  overflow-x: auto;
 }
 
 .logo {
@@ -59,7 +58,6 @@ nav {
   font-weight: 800;
   color: var(--accent);
   white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .nav-links {
@@ -68,7 +66,6 @@ nav {
   list-style: none;
   margin-left: auto;
   padding: 0;
-  white-space: nowrap;
 }
 
 .nav-links a {
@@ -82,6 +79,13 @@ nav {
   color: var(--accent);
 }
 
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--accent);
+}
 
 /* Main Layout */
 main {
@@ -324,22 +328,30 @@ footer {
 
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 20px;
-    gap: 10px;
-    flex-wrap: nowrap;
+  .hamburger {
+    display: block;
   }
 
   .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    flex-direction: column;
+    background: var(--card);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 1rem;
+    display: none;
+    z-index: 999;
+  }
+
+  .nav-links.show {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    gap: 16px;
-    overflow-x: auto;
-    white-space: nowrap;
+  }
+
+  .nav-links a {
+    padding: 0.5rem 0;
+    width: 100%;
   }
 
   .logo {
@@ -386,4 +398,3 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 }
-

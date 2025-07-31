@@ -17,8 +17,10 @@
 <body>
   <nav>
     <div class="logo">Brady Koenig</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="resume.html">Resume</a></li>
@@ -44,5 +46,15 @@
   </main>
 
   <footer>© 2025 Brady Koenig • All Rights Reserved</footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
 </body>
 </html>
