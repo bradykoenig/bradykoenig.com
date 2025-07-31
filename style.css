@@ -39,7 +39,7 @@ body::before {
   100% { transform: translate(100px, 60px); }
 }
 
-/* Navbar */
+/* Navbar – same look for all screen sizes */
 nav {
   display: flex;
   justify-content: space-between;
@@ -47,21 +47,28 @@ nav {
   padding: 20px 40px;
   border-bottom: 1px solid #333;
   background: var(--bg);
-  z-index: 10;
   position: sticky;
   top: 0;
+  z-index: 100;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .logo {
   font-size: 1.6rem;
   font-weight: 800;
   color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-links {
   display: flex;
   gap: 24px;
   list-style: none;
+  margin-left: auto;
+  padding: 0;
+  white-space: nowrap;
 }
 
 .nav-links a {
@@ -74,6 +81,7 @@ nav {
 .nav-links a.active {
   color: var(--accent);
 }
+
 
 /* Main Layout */
 main {
