@@ -325,16 +325,25 @@ footer {
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 16px 20px;
     gap: 10px;
+    flex-wrap: nowrap;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
     gap: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .logo {
+    font-size: 1.4rem;
   }
 
   .hero img.profile-pic {
@@ -377,3 +386,4 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 }
+
